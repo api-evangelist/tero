@@ -1,0 +1,26 @@
+generated: '2026-10-24'
+method: searched
+generator: extract-docs-artifacts.py (local)
+source: https://docs.usetero.com/trust/architecture.md
+sources:
+- https://docs.usetero.com/trust/architecture.md
+- https://docs.usetero.com/trust/controls/network-security.md
+- https://docs.usetero.com/trust/assurance/compliance-and-assurance.md
+- https://docs.usetero.com/trust/policies/index.md
+standards:
+- id: soc2
+  conforms: false
+  evidence: 'SOC 2 Type II | In progress (target: July 2026)'
+- id: openapi-3.1
+  conforms: true
+  evidence: the document declares 3.1.0
+- id: oauth2
+  conforms: false
+  evidence: no securitySchemes declared
+- id: rfc9457
+  conforms: false
+  evidence: no response declares application/problem+json
+- id: idempotency
+  conforms: false
+  evidence: no idempotency key parameter on mutating operations
+docs: https://docs.usetero.com/trust/architecture.md

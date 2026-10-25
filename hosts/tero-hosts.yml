@@ -1,0 +1,147 @@
+generated: '2026-10-24'
+method: derived
+source: the pre-flight dossier, apis.yml pointers, spec servers, well-known, vendors -- nothing fetched here
+generator: derive-hosts.py
+summary:
+  hosts: 10
+  own: 7
+  other_domain: 2
+  platform: 1
+  roles:
+  - api
+  - docs
+  - marketing
+  - other
+  - source
+  - website
+hosts:
+- host: api.usetero.com
+  found_by:
+  - probed
+  - site-links
+  - contract-discovery
+  - well-known
+  types: []
+  serves: []
+  registrable_domain: usetero.com
+  role: api
+  relation: own
+- host: app.datadoghq.com
+  found_by:
+  - docs-index
+  types: []
+  serves:
+  - docs
+  registrable_domain: datadoghq.com
+  role: other
+  relation: other-domain
+- host: app.usetero.com
+  found_by:
+  - probed
+  - site-links
+  - contract-discovery
+  - well-known
+  types: []
+  serves: []
+  registrable_domain: usetero.com
+  role: other
+  relation: own
+- host: demo.usetero.com
+  found_by:
+  - probed
+  - site-links
+  - contract-discovery
+  - well-known
+  types: []
+  serves: []
+  registrable_domain: usetero.com
+  role: other
+  relation: own
+- host: docs.usetero.com
+  found_by:
+  - pointer
+  - apis[]
+  - probed
+  - site-links
+  - namespace-probe
+  - docs-index
+  - spec-found
+  - contract-discovery
+  - well-known
+  - vendor-detect
+  types:
+  - GettingStarted
+  - APIReference
+  - Documentation
+  serves:
+  - docs
+  - spec
+  - hosting
+  title: What is Tero? - Tero Documentation
+  status: 200
+  vendor: vercel
+  registrable_domain: usetero.com
+  role: docs
+  relation: own
+- host: github.com
+  found_by:
+  - pointer
+  - docs-index
+  types:
+  - GitHubOrganization
+  serves:
+  - docs
+  registrable_domain: github.com
+  role: source
+  relation: platform
+- host: mintlify.com
+  found_by:
+  - docs-index
+  types: []
+  serves:
+  - docs
+  registrable_domain: mintlify.com
+  role: other
+  relation: other-domain
+- host: trust.usetero.com
+  found_by:
+  - pointer
+  - probed
+  - site-links
+  - well-known
+  types:
+  - TrustCenter
+  serves: []
+  registrable_domain: usetero.com
+  role: other
+  relation: own
+- host: usetero.com
+  found_by:
+  - pointer
+  - probed
+  - site-links
+  - well-known
+  types:
+  - Blog
+  - Pricing
+  - TermsOfService
+  - PrivacyPolicy
+  serves: []
+  registrable_domain: usetero.com
+  role: marketing
+  relation: own
+- host: www.usetero.com
+  found_by:
+  - pointer
+  - probed
+  - contract-discovery
+  - well-known
+  - vendor-detect
+  types:
+  - Website
+  serves:
+  - cdn
+  vendor: cloudflare
+  registrable_domain: usetero.com
+  role: website
+  relation: own

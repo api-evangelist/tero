@@ -1,0 +1,73 @@
+openapi: 3.1.0
+info:
+  title: Tero API
+  version: '2026-10-24'
+  description: 'GENERATED FROM DOCUMENTATION by API Evangelist on 2026-10-24: 3 operation(s) read from 2 public documentation page(s) (each operation
+    names its page in x-source). This is not the provider''s published contract; Tero has published no machine-readable contract that the pipeline
+    could find. Engine: local.'
+  x-evidence-tiers:
+    code-example: 3
+    documentation: 0
+    pages-with-code: 2
+    pages-read: 2
+  x-generated-from: documentation
+  x-provenance: generated
+  x-authored-by: API Evangelist
+  x-generated: '2026-10-24'
+  x-generator: generate-contract-from-docs.py
+  x-engine: local
+  x-sources:
+  - https://docs.usetero.com/edge/edge-reference/operations.md
+  - https://docs.usetero.com/edge/quickstart.md
+paths:
+  /_edge/metrics:
+    get:
+      operationId: get_edge_metrics
+      tags:
+      - Edge
+      summary: GET /_edge/metrics
+      x-source: https://docs.usetero.com/edge/edge-reference/operations.md
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: 'curl http://localhost:8080/_edge/metrics
+
+          ```'
+  /_health:
+    get:
+      operationId: get_health
+      tags:
+      - Health
+      summary: GET /_health
+      x-source: https://docs.usetero.com/edge/edge-reference/operations.md
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: 'curl http://localhost:8080/_health
+
+          ```'
+  /api/v2/logs:
+    post:
+      operationId: post_api_v2_logs
+      tags:
+      - Api
+      summary: POST /api/v2/logs
+      x-source: https://docs.usetero.com/edge/quickstart.md
+      responses:
+        '201':
+          description: Success (status as documented)
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: "curl -X POST http://localhost:8080/api/v2/logs  -H \"Content-Type: application/json\"  --data-binary @- <<'JSON'\n[\n  {\n \
+          \   \"message\": \"quickstart debug log\",\n    \"status\": \"debug\",\n    \"service\": \"edge-quickstart\"\n  }\n]\nJSON\n```"
+tags:
+- name: Api
+- name: Edge
+- name: Health

@@ -1,0 +1,85 @@
+# Tero Documentation
+
+## Docs
+
+- [What is Tero?](https://docs.usetero.com/introduction/what-is-tero.md): Telemetry control for production teams
+- [How Tero works](https://docs.usetero.com/introduction/how-tero-works.md): From issue evidence to policy runtime impact
+- [How Tero compares](https://docs.usetero.com/introduction/tero-versus.md): Where telemetry control fits in your stack
+- [Issues](https://docs.usetero.com/issues/overview.md): The work queue for telemetry control
+- [Review an issue](https://docs.usetero.com/issues/review-an-issue.md): Decide what to do with a telemetry finding
+- [Master Catalog](https://docs.usetero.com/master-catalog/overview.md): The catalog context behind issues and policies
+- [Policies](https://docs.usetero.com/policies/overview.md): Reviewable control-plane artifacts
+- [Enforcement](https://docs.usetero.com/policies/enforcement/overview.md): Where and how Tero enforces policies
+- [Enforce at edge](https://docs.usetero.com/policies/enforcement/edge.md): Execute policies before data leaves your network
+- [Enforce in provider](https://docs.usetero.com/policies/enforcement/provider.md): Configure exclusion filters and routing rules via API
+- [Open PRs](https://docs.usetero.com/policies/enforcement/open-prs.md): Fix instrumentation at the source with pull requests
+- [Create tickets](https://docs.usetero.com/policies/enforcement/create-tickets.md): Assign work to engineers in Linear or GitHub Issues
+- [Notify](https://docs.usetero.com/policies/enforcement/notify.md): Alert teams in Slack or email
+- [Set SLOs](https://docs.usetero.com/policies/enforcement/set-slos.md): Quality targets for teams to meet
+- [Datadog](https://docs.usetero.com/integrations/datadog.md): Create read-only Datadog credentials for Tero
+- [Evidence](https://docs.usetero.com/issues/evidence.md): The evidence Tero shows before it recommends action
+- [Issue lifecycle](https://docs.usetero.com/issues/lifecycle.md): Statuses, views, and actions for issues
+- [Services](https://docs.usetero.com/master-catalog/services.md): Service catalog context for issues and policies
+- [Log events](https://docs.usetero.com/master-catalog/log-events.md): Grouped log patterns used in issue evidence
+- [Policy lifecycle](https://docs.usetero.com/policies/lifecycle.md): Policy states, sources, deployments, imports, and impact
+- [Policy categories](https://docs.usetero.com/policies/categories/overview.md): Telemetry issue categories that can produce policy recommendations
+- [Duplicate fields](https://docs.usetero.com/policies/categories/duplicate-fields.md): The same field stored in multiple locations
+- [Accidental debug statements](https://docs.usetero.com/policies/categories/accidental-debug-statements.md): Temporary debugging output that shipped to production
+- [Malformed data](https://docs.usetero.com/policies/categories/malformed-data.md): Binary blobs, corrupted output, unparseable logs
+- [Health checks](https://docs.usetero.com/policies/categories/health-checks.md): Readiness probes, liveness probes, synthetic monitoring
+- [Bot traffic](https://docs.usetero.com/policies/categories/bot-traffic.md): Log events where bot filtering is possible
+- [Instrumentation bloat](https://docs.usetero.com/policies/categories/instrumentation-bloat.md): SDK and collector metadata with low diagnostic value
+- [PII leakage](https://docs.usetero.com/policies/categories/pii-leakage.md): Sensitive data that ended up in logs
+- [Excessive payloads](https://docs.usetero.com/policies/categories/excessive-payloads.md): Response bodies, large objects, and data blobs in logs
+- [Debug mode left on](https://docs.usetero.com/policies/categories/debug-mode-left-on.md): Verbose logging enabled for troubleshooting and left on
+- [Logs in hot path](https://docs.usetero.com/policies/categories/logs-in-hot-path.md): Log statements in middleware, loops, or high-frequency code
+- [Burst protection](https://docs.usetero.com/policies/categories/burst-protection.md): Circuit breakers for logs that surge during failures
+- [High cardinality tags](https://docs.usetero.com/policies/categories/high-cardinality-tags.md): Metric tags with unbounded values that create many time series
+- [What is Edge?](https://docs.usetero.com/edge/overview.md): A telemetry policy runtime for your infrastructure
+- [How Edge works](https://docs.usetero.com/edge/concepts.md): The Edge runtime model
+- [Edge Quickstart](https://docs.usetero.com/edge/quickstart.md): Run Edge locally and verify one policy
+- [Architecture](https://docs.usetero.com/edge/architecture.md): How Edge is built and why it's fast
+- [Edge Datadog](https://docs.usetero.com/edge/distributions/datadog.md): Edge distribution for Datadog log and metric ingestion
+- [Edge OTLP](https://docs.usetero.com/edge/distributions/otlp.md): Edge distribution for OpenTelemetry Protocol
+- [Edge Full](https://docs.usetero.com/edge/distributions/all.md): Full Edge distribution supporting all protocols
+- [Deploy with Helm](https://docs.usetero.com/edge/how-to/helm.md): Install Tero Edge on Kubernetes with the official Helm chart
+- [Datadog Agent](https://docs.usetero.com/integrations/datadog-agent.md): Deploy Edge alongside the Datadog Agent on Kubernetes
+- [Datadog Lambda Extension](https://docs.usetero.com/integrations/datadog-lambda-extension.md): Filter Lambda function telemetry with the Tero Datadog Lambda Extension
+- [Datadog Lambda Forwarder](https://docs.usetero.com/integrations/datadog-lambda-forwarder.md): Filter AWS logs with the Tero Edge Lambda Extension
+- [OpenTelemetry Collector](https://docs.usetero.com/integrations/otel-collector.md): Apply policies to logs in the OpenTelemetry Collector
+- [Prometheus](https://docs.usetero.com/integrations/prometheus.md): Deploy Edge as a sidecar proxy for Prometheus metrics scraping on Kubernetes
+- [Config](https://docs.usetero.com/edge/edge-reference/config.md): Complete configuration reference for Edge
+- [Operations](https://docs.usetero.com/edge/edge-reference/operations.md): Running Edge in production: logging, health checks, resource requirements
+- [Log Filter](https://docs.usetero.com/edge/policy-reference/log-filter.md): Filter logs by severity, content, attributes, and more
+- [Log Transform](https://docs.usetero.com/edge/policy-reference/log-transform.md): Redact, remove, rename, and add log fields
+- [Metric Filter](https://docs.usetero.com/edge/policy-reference/metric-filter.md): Filter metrics by name, type, and attributes
+- [Edge Source](https://docs.usetero.com/edge/github-edge.md)
+- [Policy Spec](https://docs.usetero.com/edge/github-policy.md)
+- [Overview](https://docs.usetero.com/trust/overview.md): Security, privacy, and compliance posture for Tero-hosted and self-hosted deployments.
+- [Reviewer Map](https://docs.usetero.com/trust/reviewer-map.md): Fast lookup for common security questionnaire topics.
+- [Security Architecture](https://docs.usetero.com/trust/architecture.md): End-to-end security architecture, trust boundaries, and enforcement model.
+- [Shared Responsibility](https://docs.usetero.com/trust/shared-responsibility.md): Control ownership between Tero and customers in hosted and self-hosted deployments.
+- [Data Handling](https://docs.usetero.com/trust/controls/data-handling.md): What data Tero handles, what is stored, and how retention and deletion work.
+- [Identity and Access](https://docs.usetero.com/trust/controls/identity-access.md): Authentication, authorization, credential scope, and access lifecycle controls.
+- [Network Security](https://docs.usetero.com/trust/controls/network-security.md): External exposure model, transport security, edge protections, and connectivity options.
+- [Encryption and Key Management](https://docs.usetero.com/trust/controls/encryption-key-management.md): Encryption in transit and at rest, key ownership model, rotation, and key event visibility.
+- [Secure Development](https://docs.usetero.com/trust/controls/secure-development.md): How code, dependencies, secrets, and deployments are controlled in the SDLC.
+- [Incident Response and Resilience](https://docs.usetero.com/trust/controls/incident-response.md): Detection, triage, communication, and recovery expectations for security incidents.
+- [AI Data Controls](https://docs.usetero.com/trust/controls/ai-data-controls.md): How AI provider paths are configured, what data is sent, and deployment-dependent control options.
+- [Compliance and Assurance](https://docs.usetero.com/trust/assurance/compliance-and-assurance.md): Current compliance status and available assurance artifacts.
+- [Subprocessors and Third Parties](https://docs.usetero.com/trust/assurance/subprocessors-third-parties.md): Third-party services used in hosted deployments and their processing roles.
+- [Documents and Requests](https://docs.usetero.com/trust/assurance/documents-and-requests.md): How to request security documentation and assurance artifacts.
+- [Security Policies](https://docs.usetero.com/trust/policies/index.md): Policy library for trust controls and handling standards.
+- [Authentication and Password Standard](https://docs.usetero.com/trust/policies/authentication-password-standard.md): Authentication, password, MFA, and session-control baseline for user access.
+- [Cloud Services Security Standard](https://docs.usetero.com/trust/policies/cloud-services-security-standard.md): Approval and operating security baseline for cloud services used to deliver Tero.
+- [Data Classification](https://docs.usetero.com/trust/policies/data-classification.md): Classification levels and required handling controls.
+- [Data Retention](https://docs.usetero.com/trust/policies/data-retention.md): Retention periods and deletion behavior for core hosted data classes.
+- [DLP Standard](https://docs.usetero.com/trust/policies/dlp-standard.md): Current and planned controls for preventing and detecting sensitive data exfiltration risk.
+- [Encryption Standard](https://docs.usetero.com/trust/policies/encryption-standard.md): Encryption and key-management requirements for hosted deployments.
+
+## OpenAPI Specs
+
+- [openapi](https://docs.usetero.com/api-reference/openapi.json)
+
+
+This documentation is built and hosted on [Mintlify](https://mintlify.com), a developer documentation platform.

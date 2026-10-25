@@ -1,25 +1,103 @@
 aid: tero
+
 name: Tero
-description: 'Tero is a company surfaced via the API Evangelist harvest backlog (source: vc-portfolio;
-  backed by founder-collective) and added to the network as a stub for full-pipeline profiling.'
+
+description: 'Tero provides an agent‑native telemetry layer that connects read‑only to existing observability data stores. It continuously identifies costly waste, sensitive data exposure, and operational risks that traditional tools miss. By delivering actionable issue evidence, Tero helps organizations cut costs by 40‑60%, improve compliance, and enhance reliability across cloud and on‑prem environments. The platform offers a unified view of telemetry, automated issue detection, and integrated remediation actions, all without requiring changes to existing monitoring stacks.'
+
 url: https://raw.githubusercontent.com/api-evangelist/tero/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:vc-portfolio
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-10-24 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-10-24'
+
 modified: '2026-10-24'
+
 tags:
 - Company
-apis: []
+- Observability
+- Telemetry
+- Cost-Reduction
+- Compliance
+- Reliability
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
-x-backed-by:
-- founder-collective
+
 common:
+- type: Spectral
+  url: rules/tero-rules.yml
+- type: Vocabulary
+  url: vocabulary/tero-vocabulary.yml
+- type: Conformance
+  url: conformance/tero-conformance.yml
+- type: LLMsTxt
+  url: llms/tero-llms.txt
+- type: AgentCard
+  url: a2a/tero-a2a.yml
+- type: WellKnown
+  url: well-known/tero-well-known.yml
+- type: Hosts
+  url: hosts/tero-hosts.yml
+- type: Vendors
+  url: vendors/tero-vendors.yml
+- type: TrustCenter
+  url: https://trust.usetero.com/
+- type: GettingStarted
+  url: https://docs.usetero.com/edge/quickstart
+- type: APIReference
+  url: https://docs.usetero.com/llms.txt
+- type: DomainSecurity
+  url: security/tero-domain-security.yml
 - type: Website
   url: https://www.usetero.com/
+- type: Documentation
+  url: https://docs.usetero.com/
+- type: Blog
+  url: https://usetero.com/blog/
+- type: Pricing
+  url: https://usetero.com/pricing/
+- type: TermsOfService
+  url: https://usetero.com/terms/
+- type: PrivacyPolicy
+  url: https://usetero.com/privacy/
+- type: GitHubOrganization
+  url: https://github.com/usetero
+
+apis:
+- aid: tero:tero-api
+  name: Tero API
+  description: 'Tero API as documented publicly: 3 operations. Contract generated from the documentation by API Evangelist (2026-10-24); not the
+    provider''s own document.'
+  humanURL: https://docs.usetero.com/edge/edge-reference/operations.md
+  properties:
+  - type: OpenAPI
+    url: openapi/_ae-authored/tero-openapi-generated.yml
+    x-provenance: generated
+
+x-backed-by:
+- founder-collective
+
+x-coverage:
+  state: unreadable
+  reason: no-machine-readable-spec
+  detail: Documentation at https://docs.usetero.com/ provides no OpenAPI, AsyncAPI, GraphQL, gRPC, or WSDL specifications.
+  evidence:
+    - url: https://docs.usetero.com/api-docs
+      status: 404
+  checked: '2026-10-24'
+x-enrichment:
+  date: '2026-10-24'
+  status: enriched
+  artifacts_added: 22
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local,regulatory=local
